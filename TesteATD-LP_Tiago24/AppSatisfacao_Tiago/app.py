@@ -7,7 +7,7 @@ import os
 from calendar import monthrange
 
 app = Flask(__name__)
-app.secret_key = "sua_chave_secreta_aqui_2026"
+app.secret_key = os.environ.get("SECRET_KEY")
 
 DATABASE = "database.db"
 ADMIN_URL = "/Admin_Registos2026"
